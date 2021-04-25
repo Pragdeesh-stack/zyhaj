@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<html>
+    <head>
+        <title>Try it Yourself</title>
+        <link rel="stylesheet" href="style.css"></link>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <style>
+            .navbar{
+    background-color: teal;
+    color:white;
+}
+.title{
+    text-align: center;
+    margin-top:40px;
+    margin-bottom: 40px;
+}
+
+.box{
+    width:40%;
+    border: 2px solid grey;
+    border-radius:6px;
+    height: 400px;
+    resize:none;
+    background-color:white;
+    box-shadow: 10px 10px 25px 0px #b8b6b8;
+    padding:5px;
+}
+
+.content{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+body{
+    background-color: azure !important;
+}
+.Btn{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.button{
+    border: 1px solid #303030;
+    padding: 10px 30px;
+    color: #292929;
+}
+.button:hover{
+    background-color: #303030;
+    color: #fff;
+}
+.Btn a{
+    text-decoration: none;
+    font-family: Century Gothic;
+    transition: 0.6s ease;
+}
+        </style>
+    </head>
+    <body>
+        <div class="title">
+            <h1>Online Code-editor</h1>
+            <p>Write some HTML, CSS, and JavaScript to test it out!</p>
+            <input type="button" value="Run" class="btn btn-primary" onclick="tryIt()">
+        </div>
+        <div class="content">
+            <textarea class="box" id="input"><!---Write your code here --></textarea>
+            <div class="arrow">
+                &#x27A1;
+            </div>
+            <div class="box" id="output">
+
+            </div>
+        </div>
+    </body>
+
+</html>
+
+<script type="text/javascript">
+    function tryIt(){
+        var code = document.getElementById("input").value;
+        document.getElementById("output").innerHTML = code;
+    }
+
+</script>
+<div class="Btn">
+    <a href="/" class="button">Back to Home</a>
+    <a href="/c-editor" class="button">stay on code editor</a>
+</div>
+</head>
+</html>
